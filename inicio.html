@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Calendario Animado - Transparente</title>
+<link rel="stylesheet" href="css/style01.css">
+</head>
+<body>
+
+<div class="calendar-wrap">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div>
+        <h1>Calendario</h1>
+      </div>
+    </div>
+
+    <div class="month-control">
+      <div>
+        <div class="month-title" id="monthLabel">Mes Año</div>
+        <div class="muted" id="weekRange">Rango</div>
+      </div>
+
+      <div style="display:flex; gap:8px;">
+        <button class="btn" id="prevBtn" title="Mes anterior">‹</button>
+        <button class="btn" id="todayBtn" title="Hoy">Hoy</button>
+        <button class="btn" id="nextBtn" title="Siguiente mes">›</button>
+      </div>
+    </div>
+
+    <button class="btn add-btn" id="openModal"> Crear evento</button>
+
+    <div style="margin-top:6px; font-size:13px; color:var(--muted)">Próximos eventos</div>
+    <div class="events-list" id="eventsList">
+    </div>
+
+  </aside>
+
+  <!-- CALENDARIO -->
+  <main class="calendar">
+    <div class="weekdays" id="weekdays">
+      <!-- Lun, Mar... -->
+    </div>
+
+    <div class="days-grid" id="daysGrid">
+      <!-- días -->
+    </div>
+  </main>
+
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <h3>Crear evento</h3>
+
+    <div class="field">
+      <label>Título</label>
+      <input type="text" id="evTitle" placeholder="Nombre del evento">
+    </div>
+
+    <div class="field">
+      <label>Fecha</label>
+      <input type="date" id="evDate">
+    </div>
+
+    <div class="field">
+      <label>Hora inicio</label>
+      <input type="time" id="evStart">
+    </div>
+
+    <div class="field">
+      <label>Hora fin</label>
+      <input type="time" id="evEnd">
+    </div>
+
+    <div class="field">
+      <label>Color</label>
+      <input type="color" id="evColor" value="#8b5cf6">
+    </div>
+
+    <div class="field">
+      <label>Descripción</label>
+      <textarea id="evDesc" rows="3" placeholder="Opcional"></textarea>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn" id="closeModal">Cancelar</button>
+      <button class="btn add-btn" id="saveEvent">Guardar</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/script01.js"></script>
+</body>
+</html>
